@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MinioProject")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9956257ee6fffc3f8394a78795d93c20e3d84bfd")]
 [assembly: System.Reflection.AssemblyProductAttribute("MinioProject")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MinioProject")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

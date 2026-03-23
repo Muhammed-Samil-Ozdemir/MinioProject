@@ -253,3 +253,4 @@
 /home/samil/RiderProjects/MinioProject/MinioProject/obj/Debug/net9.0/MinioProject.pdb
 /home/samil/RiderProjects/MinioProject/MinioProject/obj/Debug/net9.0/MinioProject.genruntimeconfig.cache
 /home/samil/RiderProjects/MinioProject/MinioProject/obj/Debug/net9.0/ref/MinioProject.dll
+/home/samil/RiderProjects/MinioProject/MinioProject/obj/Debug/net9.0/MinioProject.sourcelink.json

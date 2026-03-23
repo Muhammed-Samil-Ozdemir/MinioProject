@@ -37,5 +37,39 @@ namespace MinioProject.Controllers
             
             return File(stream, "application/octet-stream", fileName);
         }
+
+        [HttpGet("[action]/{filename}")]
+        public async Task<IActionResult> Show(string fileName)
+        {
+            var stream = new MemoryStream();
+
+            await minioClient.GetObjectAsync(
+                new GetObjectArgs()
+                    .WithBucket(BucketName)
+                    .WithObject(fileName)
+                    .WithCallbackStream(s => s.CopyTo(stream)));
+
+            stream.Position = 0;
+            
+            var contentType = GetContentType(fileName);
+
+            return File(stream, contentType);
+        }
+        
+        private string GetContentType(string fileName)
+        {
+            var ext = Path.GetExtension(fileName).ToLower();
+
+            return ext switch
+            {
+                ".jpg" or ".jpeg" => "image/jpeg",
+                ".png" => "image/png",
+                ".gif" => "image/gif",
+                ".webp" => "image/webp",
+                _ => "application/octet-stream"
+            };
+        }
     }
+    
+    
 }
